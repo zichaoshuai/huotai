@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>list</title>
+    <!--<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">-->
+    <!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
+    <!--<title>list</title>-->
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1127877_fqmdiupe69g.css">
+    <link rel="stylesheet" href="<%= BASE_URL %>reset.css">
+
   </head>
   <body>
     <noscript>
@@ -13,5 +18,20 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script>
+      ;(function(){
+        function remScale(){
+          var winW = document.documentElement.clientWidth;
+
+          winW = winW > 750 ? 750 : winW;
+
+          document.documentElement.style.fontSize = winW/750*100 + "px";
+        };
+
+        remScale();
+
+        window.addEventListener("resize", remScale);
+      })();
+    </script>
   </body>
 </html>
